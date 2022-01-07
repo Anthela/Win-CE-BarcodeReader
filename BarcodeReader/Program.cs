@@ -15,7 +15,7 @@ namespace BarcodeReader
         [MTAThread]
         static void Main()
         {
-            //string path = @"\Program Files\SmartDeviceProject1\Data\jutaxls_211229061136.csv";
+            //string path = @"\Program Files\BarcodeReader\Data\jutaxls_211229061136.csv";
             string path = @"\My Documents\database.csv";
 
             BarcodeReaderDataAccess dataAccess = new BarcodeReaderDataAccess(path);
