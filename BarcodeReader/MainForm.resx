@@ -117,82 +117,109 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="mainMenu1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 14pt</value>
-  </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>79, 24</value>
-  </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 20</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Vonalkód</value>
-  </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="BarcodeTextBox.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 14pt</value>
-  </data>
-  <data name="BarcodeTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>40, 53</value>
-  </data>
-  <data name="BarcodeTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>175, 29</value>
-  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="BarcodeTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="VatTextBox.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
-  <data name="&gt;&gt;BarcodeTextBox.Name" xml:space="preserve">
-    <value>BarcodeTextBox</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="VatTextBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 14pt, style=Bold</value>
   </data>
-  <data name="&gt;&gt;BarcodeTextBox.Type" xml:space="preserve">
+  <data name="VatTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>148, 268</value>
+  </data>
+  <data name="VatTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 29</value>
+  </data>
+  <data name="VatTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;VatTextBox.Name" xml:space="preserve">
+    <value>VatTextBox</value>
+  </data>
+  <data name="&gt;&gt;VatTextBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;BarcodeTextBox.Parent" xml:space="preserve">
+  <data name="&gt;&gt;VatTextBox.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;BarcodeTextBox.ZOrder" xml:space="preserve">
-    <value>6</value>
+  <data name="&gt;&gt;VatTextBox.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="label4.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 14pt</value>
   </data>
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>65, 95</value>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>165, 245</value>
   </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 29</value>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 20</value>
   </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Megnevezés</value>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Áfa</value>
   </data>
-  <data name="&gt;&gt;label2.Name" xml:space="preserve">
-    <value>label2</value>
+  <data name="&gt;&gt;label4.Name" xml:space="preserve">
+    <value>label4</value>
   </data>
-  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+  <data name="&gt;&gt;label4.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>5</value>
+  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="PriceTextBox.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="PriceTextBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 14pt, style=Bold</value>
+  </data>
+  <data name="PriceTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 268</value>
+  </data>
+  <data name="PriceTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 29</value>
+  </data>
+  <data name="PriceTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;PriceTextBox.Name" xml:space="preserve">
+    <value>PriceTextBox</value>
+  </data>
+  <data name="&gt;&gt;PriceTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PriceTextBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;PriceTextBox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 14pt</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>54, 245</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 20</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Ár</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="NameTextBox.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -228,107 +255,77 @@
   <data name="&gt;&gt;NameTextBox.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 14pt</value>
   </data>
-  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>54, 245</value>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>65, 95</value>
   </data>
-  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>32, 20</value>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 29</value>
   </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>Ár</value>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Megnevezés</value>
   </data>
-  <data name="&gt;&gt;label3.Name" xml:space="preserve">
-    <value>label3</value>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
   </data>
-  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
-  <data name="PriceTextBox.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="PriceTextBox.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 14pt, style=Bold</value>
-  </data>
-  <data name="PriceTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 268</value>
-  </data>
-  <data name="PriceTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>95, 29</value>
-  </data>
-  <data name="PriceTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;PriceTextBox.Name" xml:space="preserve">
-    <value>PriceTextBox</value>
-  </data>
-  <data name="&gt;&gt;PriceTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PriceTextBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;PriceTextBox.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="label4.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="BarcodeTextBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 14pt</value>
   </data>
-  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>165, 245</value>
+  <data name="BarcodeTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>40, 53</value>
   </data>
-  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>42, 20</value>
+  <data name="BarcodeTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>175, 29</value>
   </data>
-  <data name="label4.Text" xml:space="preserve">
-    <value>Áfa</value>
-  </data>
-  <data name="&gt;&gt;label4.Name" xml:space="preserve">
-    <value>label4</value>
-  </data>
-  <data name="&gt;&gt;label4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+  <data name="BarcodeTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="VatTextBox.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="&gt;&gt;BarcodeTextBox.Name" xml:space="preserve">
+    <value>BarcodeTextBox</value>
   </data>
-  <data name="VatTextBox.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 14pt, style=Bold</value>
-  </data>
-  <data name="VatTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>148, 268</value>
-  </data>
-  <data name="VatTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 29</value>
-  </data>
-  <data name="VatTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;VatTextBox.Name" xml:space="preserve">
-    <value>VatTextBox</value>
-  </data>
-  <data name="&gt;&gt;VatTextBox.Type" xml:space="preserve">
+  <data name="&gt;&gt;BarcodeTextBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;VatTextBox.Parent" xml:space="preserve">
+  <data name="&gt;&gt;BarcodeTextBox.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;VatTextBox.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;BarcodeTextBox.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 14pt</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>79, 24</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Vonalkód</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
   <metadata name="$this.FormFactorShadowProperty" xml:space="preserve">
     <value>WEBPAD</value>
@@ -347,12 +344,6 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>BarCodeReader</value>
-  </data>
-  <data name="&gt;&gt;mainMenu1.Name" xml:space="preserve">
-    <value>mainMenu1</value>
-  </data>
-  <data name="&gt;&gt;mainMenu1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MainMenu, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>MainForm</value>

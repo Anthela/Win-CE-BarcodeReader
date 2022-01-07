@@ -6,7 +6,6 @@
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-        private System.Windows.Forms.MainMenu mainMenu1;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -30,45 +29,28 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.mainMenu1 = new System.Windows.Forms.MainMenu();
-            this.label1 = new System.Windows.Forms.Label();
-            this.BarcodeTextBox = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.NameTextBox = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.PriceTextBox = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.VatTextBox = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.PriceTextBox = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.NameTextBox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.BarcodeTextBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label1
+            // VatTextBox
             // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
+            this.VatTextBox.BackColor = System.Drawing.Color.Gainsboro;
+            resources.ApplyResources(this.VatTextBox, "VatTextBox");
+            this.VatTextBox.ForeColor = System.Drawing.Color.Black;
+            this.VatTextBox.Name = "VatTextBox";
+            this.VatTextBox.ReadOnly = true;
             // 
-            // BarcodeTextBox
+            // label4
             // 
-            resources.ApplyResources(this.BarcodeTextBox, "BarcodeTextBox");
-            this.BarcodeTextBox.Name = "BarcodeTextBox";
-            this.BarcodeTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnItemNumberKeyPress);
-            // 
-            // label2
-            // 
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.Name = "label2";
-            // 
-            // NameTextBox
-            // 
-            this.NameTextBox.BackColor = System.Drawing.Color.Gainsboro;
-            resources.ApplyResources(this.NameTextBox, "NameTextBox");
-            this.NameTextBox.ForeColor = System.Drawing.Color.Black;
-            this.NameTextBox.Name = "NameTextBox";
-            this.NameTextBox.ReadOnly = true;
-            // 
-            // label3
-            // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.Name = "label3";
+            resources.ApplyResources(this.label4, "label4");
+            this.label4.Name = "label4";
             // 
             // PriceTextBox
             // 
@@ -78,18 +60,34 @@
             this.PriceTextBox.Name = "PriceTextBox";
             this.PriceTextBox.ReadOnly = true;
             // 
-            // label4
+            // label3
             // 
-            resources.ApplyResources(this.label4, "label4");
-            this.label4.Name = "label4";
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.Name = "label3";
             // 
-            // VatTextBox
+            // NameTextBox
             // 
-            this.VatTextBox.BackColor = System.Drawing.Color.Gainsboro;
-            resources.ApplyResources(this.VatTextBox, "VatTextBox");
-            this.VatTextBox.ForeColor = System.Drawing.Color.Black;
-            this.VatTextBox.Name = "VatTextBox";
-            this.VatTextBox.ReadOnly = true;
+            this.NameTextBox.BackColor = System.Drawing.Color.Gainsboro;
+            resources.ApplyResources(this.NameTextBox, "NameTextBox");
+            this.NameTextBox.ForeColor = System.Drawing.Color.Black;
+            this.NameTextBox.Name = "NameTextBox";
+            this.NameTextBox.ReadOnly = true;
+            // 
+            // label2
+            // 
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.Name = "label2";
+            // 
+            // BarcodeTextBox
+            // 
+            resources.ApplyResources(this.BarcodeTextBox, "BarcodeTextBox");
+            this.BarcodeTextBox.Name = "BarcodeTextBox";
+            this.BarcodeTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnItemNumberKeyPress);
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
             // 
             // MainForm
             // 
@@ -107,7 +105,6 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
-            this.Menu = this.mainMenu1;
             this.MinimizeBox = false;
             this.Name = "MainForm";
             this.ResumeLayout(false);
@@ -116,14 +113,15 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox BarcodeTextBox;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox NameTextBox;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox PriceTextBox;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox VatTextBox;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox PriceTextBox;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox NameTextBox;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox BarcodeTextBox;
+        private System.Windows.Forms.Label label1;
+
 
 
     }
