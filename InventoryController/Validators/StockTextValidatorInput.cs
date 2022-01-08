@@ -9,6 +9,7 @@ namespace InventoryController.Validators
     public struct StockTextValidatorInput
     {
         public string StockText { get; set; }
+        public double StockValue { get; set; }
         public Unit Unit { get; set; }
     }
 }

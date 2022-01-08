@@ -47,7 +47,7 @@ namespace BarcodeReader.DataAccess
         }
 
         public Product GetProductById(string id, IEnumerable<Product> products)
-        {   
+        {
             IEnumerable<Product> productList = products.Where(prod => prod.BarCode.Equals(id));
 
             if (productList.Any())

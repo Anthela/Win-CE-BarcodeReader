@@ -57,7 +57,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataAccess\DataAccess.cs" />
+    <Compile Include="Data\Models\InventoryItem.cs" />
     <Compile Include="Data\Models\Unit.cs" />
+    <Compile Include="Exceptions\InvalidStockValueException.cs" />
+    <Compile Include="Exceptions\InvalidUnitException.cs" />
+    <Compile Include="Exceptions\ManipulatedBarcodeException.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +87,7 @@
     <Compile Include="Validators\BarcodeTextValidatorInput.cs" />
     <Compile Include="Validators\StockTextValidatorInput.cs" />
     <Compile Include="Validators\Validator.cs" />
+    <Compile Include="Validators\ValidatorInput.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BarcodeReader\BarcodeReader.csproj">

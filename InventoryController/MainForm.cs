@@ -12,6 +12,8 @@ using BarcodeReader.DataAccess.Models;
 using InventoryController.Validators;
 
 using BarcodeReaderDataAccess = BarcodeReader.DataAccess.DataAccess;
+using InventoryDataAccess = InventoryController.DataAccess.DataAccess;
+using InventoryController.Exceptions;
 
 namespace InventoryController
 {
@@ -19,14 +21,16 @@ namespace InventoryController
     {
         private List<Product> products;
         private readonly BarcodeReaderDataAccess dataAccess;
+        private readonly InventoryDataAccess inventoryDataAccess;
         private readonly Validator validator;
         private string currentBarcode;
 
-        public MainForm(BarcodeReaderDataAccess dataAccess, Validator validator)
+        public MainForm(BarcodeReaderDataAccess dataAccess, InventoryDataAccess inventoryDataAccess, Validator validator)
         {
             InitializeComponent();
 
             this.dataAccess = dataAccess;
+            this.inventoryDataAccess = inventoryDataAccess;
             this.validator = validator;
             products = dataAccess.ReadData().ToList();
 
@@ -78,7 +82,7 @@ namespace InventoryController
         private void OnStockTextBoxKeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == Convert.ToChar(Keys.Enter))
-                this.UnitComboBox.Focus();
+                SaveInventoryItem((TextBox)sender);
             else if (e.KeyChar == Convert.ToChar(Keys.Escape))
                 ResetFormControls();
             else if (!ValidDigitChar(e.KeyChar))
@@ -93,36 +97,13 @@ namespace InventoryController
             this.PriceTextBox.Text = string.Empty;
             this.VatTextBox.Text = string.Empty;
             this.StockTextBox.Text = "0";
+            currentBarcode = string.Empty;
         }
 
         private void OnUnitComboBoxKeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == Convert.ToChar(Keys.Enter))
-            {
-                var barcodeTextValidatorInput = new BarcodeTextValidatorInput()
-                {
-                    BarcodeTextBoxText = this.BarcodeTextBox.Text,
-                    CurrentBarcode = currentBarcode
-                };
-
-                var stockTextValidatorInput = new StockTextValidatorInput()
-                {
-                    StockText = this.StockTextBox.Text,
-                    Unit = new Unit("db")
-                };
-
-                string errorMessage = validator.ValidControlValues(barcodeTextValidatorInput, stockTextValidatorInput); 
-                if (!string.IsNullOrEmpty(errorMessage))
-                    MessageBox.Show(errorMessage, "Hiba!", MessageBoxButtons.OK, MessageBoxIcon.Hand, MessageBoxDefaultButton.Button1);
-                else
-                {
-                    // nem számmal kezdődő készlet esetén 0 eléfűzése
-                    // adatok összegyűjtése
-                    // DataAccess segítségével fájlba írás
-                }
-
-                ResetFormControls();
-            }
+                SaveInventoryItem((ComboBox)sender);
             else if (e.KeyChar == Convert.ToChar(Keys.Escape))
                 ResetFormControls();
         }
@@ -132,6 +113,65 @@ namespace InventoryController
             char[] dots = new char[] { '.', ',' };
 
             return Char.IsDigit(keyChar) || keyChar == Convert.ToChar(Keys.Back) || (dots.Contains(keyChar) && !this.StockTextBox.Text.Contains(keyChar));
+        }
+
+        private void SaveInventoryItem(Control control)
+        {
+            double stockValue = 0;
+            string stockStr = this.StockTextBox.Text.Replace(',', '.');
+
+            if (stockStr.Equals("."))
+                stockValue = 0;
+            else
+                stockValue = Convert.ToDouble(stockStr);
+            
+            var validatorInput = new ValidatorInput()
+            {
+                BarcodeTextValidatorInput = new BarcodeTextValidatorInput()
+                {
+                    BarcodeTextBoxText = this.BarcodeTextBox.Text,
+                    CurrentBarcode = currentBarcode
+                },
+                StockTextValidatorInput = new StockTextValidatorInput()
+                {
+                    StockText = stockStr,
+                    StockValue = stockValue,
+                    Unit = new Unit(this.UnitComboBox.Text)
+                }
+            };
+
+            try
+            {
+                if (validator.ValidControlValues(validatorInput))
+                {
+                    InventoryItem inventoryItem = new InventoryItem(this.BarcodeTextBox.Text,
+                                                                    this.NameTextBox.Text,
+                                                                    Convert.ToInt32(this.PriceTextBox.Text),
+                                                                    this.VatTextBox.Text,
+                                                                    stockValue,
+                                                                    this.UnitComboBox.Text);
+
+                    inventoryDataAccess.SaveInventoryItem(inventoryItem);
+
+                    ResetFormControls();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Hiba!", MessageBoxButtons.OK, MessageBoxIcon.Hand, MessageBoxDefaultButton.Button1);
+                if (ex is InvalidUnitException)
+                {
+                    if (control is ComboBox)
+                    {
+                        this.StockTextBox.Focus();
+                        this.StockTextBox.SelectAll();
+                    }
+                    else
+                        this.UnitComboBox.Focus();
+                }
+                else
+                    ResetFormControls();
+            }
         }
     }
 }
