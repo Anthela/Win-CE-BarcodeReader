@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Collections.Generic;
 using System.Text;
-using InventoryController.Data.Models;
+using InventoryController.DataAccess.Models;
 
 namespace InventoryController.Validators
 {

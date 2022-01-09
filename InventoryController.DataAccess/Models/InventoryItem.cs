@@ -3,7 +3,7 @@ using System.Linq;
 using System.Collections.Generic;
 using System.Text;
 
-namespace InventoryController.Data.Models
+namespace InventoryController.DataAccess.Models
 {
     public class InventoryItem
     {

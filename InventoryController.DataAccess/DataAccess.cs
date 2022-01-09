@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Collections.Generic;
 using System.Text;
-using InventoryController.Data.Models;
+using InventoryController.DataAccess.Models;
 using System.IO;
 
 namespace InventoryController.DataAccess
@@ -21,12 +21,12 @@ namespace InventoryController.DataAccess
             using (StreamWriter writer = new StreamWriter(path, true, Encoding.UTF8))
             {
                 var properties = inventoryItem.GetType().GetProperties().Select(prop =>
-                    {
-                        if (prop.PropertyType == typeof(DateTime))
-                            return ((DateTime)prop.GetValue(inventoryItem, null)).ToString("yyyy.MM.dd HH:mm");
+                {
+                    if (prop.PropertyType == typeof(DateTime))
+                        return ((DateTime)prop.GetValue(inventoryItem, null)).ToString("yyyy.MM.dd HH:mm");
 
-                        return prop.GetValue(inventoryItem, null).ToString();
-                    }).ToArray();
+                    return prop.GetValue(inventoryItem, null).ToString();
+                }).ToArray();
 
                 writer.WriteLine(string.Join(";", properties));
             }

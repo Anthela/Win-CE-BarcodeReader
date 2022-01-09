@@ -4,21 +4,20 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{CF139F89-51B1-4529-8C8B-C580021B3505}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <ProjectGuid>{19E8C9A2-7850-4874-8818-6F02069752E0}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>InventoryController</RootNamespace>
-    <AssemblyName>InventoryController</AssemblyName>
+    <RootNamespace>InventoryController.DataAccess</RootNamespace>
+    <AssemblyName>InventoryController.DataAccess</AssemblyName>
     <ProjectTypeGuids>{4D628B5B-2FBC-4AA6-8C16-197242AEB884};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <PlatformFamilyName>WindowsCE</PlatformFamilyName>
     <PlatformID>E2BECB1F-8C8C-41ba-B736-9BE7D946A398</PlatformID>
     <OSVersion>5.0</OSVersion>
-    <DeployDirSuffix>InventoryController</DeployDirSuffix>
+    <DeployDirSuffix>InventoryController.DataAccess</DeployDirSuffix>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <NativePlatformName>Windows CE</NativePlatformName>
     <FormFactorID>
     </FormFactorID>
-    <ApplicationIcon>Content\inventory.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -52,52 +51,13 @@
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Exceptions\InvalidStockValueException.cs" />
-    <Compile Include="Exceptions\InvalidUnitException.cs" />
-    <Compile Include="Exceptions\ManipulatedBarcodeException.cs" />
-    <Compile Include="MainForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="DataAccess.cs" />
+    <Compile Include="Models\InventoryItem.cs" />
+    <Compile Include="Models\Unit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <Compile Include="Validators\BarcodeTextValidatorInput.cs" />
-    <Compile Include="Validators\StockTextValidatorInput.cs" />
-    <Compile Include="Validators\Validator.cs" />
-    <Compile Include="Validators\ValidatorInput.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Content\inventory.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\BarcodeReader.DataAccess\BarcodeReader.DataAccess.csproj">
-      <Project>{5722C319-B5BE-48F1-A7F2-89ACCDD79BFF}</Project>
-      <Name>BarcodeReader.DataAccess</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\InventoryController.DataAccess\InventoryController.DataAccess.csproj">
-      <Project>{19E8C9A2-7850-4874-8818-6F02069752E0}</Project>
-      <Name>InventoryController.DataAccess</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
   <ProjectExtensions>

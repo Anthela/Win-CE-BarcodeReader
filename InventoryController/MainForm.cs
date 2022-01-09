@@ -7,13 +7,13 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-using InventoryController.Data.Models;
 using BarcodeReader.DataAccess.Models;
 using InventoryController.Validators;
 
 using BarcodeReaderDataAccess = BarcodeReader.DataAccess.DataAccess;
 using InventoryDataAccess = InventoryController.DataAccess.DataAccess;
 using InventoryController.Exceptions;
+using InventoryController.DataAccess.Models;
 
 namespace InventoryController
 {

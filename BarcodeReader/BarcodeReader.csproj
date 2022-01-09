@@ -57,8 +57,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataAccess\DataAccess.cs" />
-    <Compile Include="DataAccess\Models\Product.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +86,12 @@
     <Content Include="Data\jutaxls_211229061136.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BarcodeReader.DataAccess\BarcodeReader.DataAccess.csproj">
+      <Project>{5722C319-B5BE-48F1-A7F2-89ACCDD79BFF}</Project>
+      <Name>BarcodeReader.DataAccess</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
   <ProjectExtensions>
