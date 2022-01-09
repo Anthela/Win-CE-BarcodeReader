@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31919.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InventoryClosing.Processor", "InventoryClosing.Processor\InventoryClosing.Processor.csproj", "{F52F3B5C-9163-4C89-A116-397A804FA601}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryClosing", "InventoryClosing\InventoryClosing.csproj", "{610669A0-D363-4FA8-AA98-C2144D3608CC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F52F3B5C-9163-4C89-A116-397A804FA601}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F52F3B5C-9163-4C89-A116-397A804FA601}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F52F3B5C-9163-4C89-A116-397A804FA601}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F52F3B5C-9163-4C89-A116-397A804FA601}.Release|Any CPU.Build.0 = Release|Any CPU
+		{610669A0-D363-4FA8-AA98-C2144D3608CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{610669A0-D363-4FA8-AA98-C2144D3608CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{610669A0-D363-4FA8-AA98-C2144D3608CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{610669A0-D363-4FA8-AA98-C2144D3608CC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0AB32149-D43E-4DD3-BF57-ADEF3F5AD9C0}
+	EndGlobalSection
+EndGlobal
