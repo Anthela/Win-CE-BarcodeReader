@@ -18,7 +18,7 @@ namespace InventoryController
         static void Main()
         {
             //string path = @"\Program Files\BarcodeReader\Data\jutaxls_211229061136.csv";
-            //string inventoryPath = @"\Program Files\InventoryController\Leltar.csv";
+            //string inventoryPath = @"\Program Files\InventoryController\Leltar.txt";
             string path = @"\My Documents\database.csv";
             string inventoryPath = @"\My Documents\Leltar.csv";
 

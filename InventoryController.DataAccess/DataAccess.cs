@@ -18,7 +18,7 @@ namespace InventoryController.DataAccess
 
         public void SaveInventoryItem(InventoryItem inventoryItem)
         {
-            using (StreamWriter writer = new StreamWriter(path, true, Encoding.UTF8))
+            using (StreamWriter writer = new StreamWriter(path, true, Encoding.Unicode))
             {
                 var properties = inventoryItem.GetType().GetProperties().Select(prop =>
                 {
