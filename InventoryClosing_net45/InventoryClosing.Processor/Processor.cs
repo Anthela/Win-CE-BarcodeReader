@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text;
 
 namespace InventoryClosing.Processor
 {
@@ -20,7 +21,7 @@ namespace InventoryClosing.Processor
         private IEnumerable<InventoryItem> GetInventoryItems()
         {
             List<InventoryItem> inventoryItems = new List<InventoryItem>();
-            var lines = File.ReadAllLines(path).Select(line => line.Split(';'));
+            var lines = File.ReadAllLines(path, Encoding.Default).Select(line => line.Split(';'));
 
             foreach (var line in lines)
             {
