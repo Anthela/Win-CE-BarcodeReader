@@ -23,7 +23,7 @@ namespace InventoryController.DataAccess
                 var properties = inventoryItem.GetType().GetProperties().Select(prop =>
                 {
                     if (prop.PropertyType == typeof(DateTime))
-                        return ((DateTime)prop.GetValue(inventoryItem, null)).ToString("yyyy.MM.dd HH:mm");
+                        return ((DateTime)prop.GetValue(inventoryItem, null)).ToString("yyyy.MM.dd");
 
                     return prop.GetValue(inventoryItem, null).ToString();
                 }).ToArray();
