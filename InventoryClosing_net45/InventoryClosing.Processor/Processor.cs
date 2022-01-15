@@ -35,7 +35,7 @@ namespace InventoryClosing.Processor
                     if (currentProp.PropertyType == typeof(int))
                         currentProp.SetValue(inventoryItem, Convert.ToInt32(line[i]));
                     else if (currentProp.PropertyType == typeof(double))
-                        currentProp.SetValue(inventoryItem, Convert.ToDouble(line[i]));
+                        currentProp.SetValue(inventoryItem, Convert.ToDouble(line[i].Replace('.', ',')));
                     else if (currentProp.PropertyType == typeof(DateTime))
                         currentProp.SetValue(inventoryItem, Convert.ToDateTime(line[i]));
                     else
@@ -62,7 +62,7 @@ namespace InventoryClosing.Processor
                     var properties = inventoryItem.GetType().GetProperties().Select(prop =>
                     {
                         if (prop.PropertyType == typeof(DateTime))
-                            return $"{(DateTime)prop.GetValue(inventoryItem):yyyy.MM.dd HH:mm}{Environment.NewLine}";
+                            return $"{(DateTime)prop.GetValue(inventoryItem):yyyy.MM.dd}{Environment.NewLine}";
 
                         return prop.GetValue(inventoryItem).ToString();
                     });
