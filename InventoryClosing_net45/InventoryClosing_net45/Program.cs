@@ -1,3 +1,7 @@
+using InventoryClosing_net45;
+using System;
+using System.Windows.Forms;
+
 namespace InventoryClosing
 {
     internal static class Program
@@ -8,8 +12,6 @@ namespace InventoryClosing
         [STAThread]
         static void Main()
         {
-            ApplicationConfiguration.Initialize();
-
             Application.Run(new MainForm());
         }
     }
