@@ -24,6 +24,8 @@ namespace InventoryController.DataAccess
                 {
                     if (prop.PropertyType == typeof(DateTime))
                         return ((DateTime)prop.GetValue(inventoryItem, null)).ToString("yyyy.MM.dd");
+                    if (prop.PropertyType == typeof(double))
+                        return prop.GetValue(inventoryItem, null).ToString().Replace('.', ',');
 
                     return prop.GetValue(inventoryItem, null).ToString();
                 }).ToArray();
